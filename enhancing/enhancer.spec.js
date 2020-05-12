@@ -12,14 +12,15 @@ describe("enhancer unit tests", () => {
 
     it("repairs", () => {
         expect(enhancer.repair({
-            name: Car,
-            durability: 10,
-            enhancement: 1
-        }).toBe({
-            name: Car,
+            name: "Car",
+            durability: 20,
+            enhancement: 2
+        })).toEqual({
+            name: "Car",
             durability: 100,
-            enhancement: 1
-        }))
+            enhancement: 2      
+        })
+
     })
 
     // it("gets", () => {
