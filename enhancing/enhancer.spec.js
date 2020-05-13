@@ -155,6 +155,17 @@ it("fails", () => {
         })
     })
 
+    it("gets", () => {
+        expect(enhancer.get({
+            name: "Rope",
+            durability: 20,
+            enhancement: 15
+        })).toEqual({
+            name: "[+15]Rope",
+            durability: 20,
+            enhancement: 15      
+        })
+    })
 
 
 })
