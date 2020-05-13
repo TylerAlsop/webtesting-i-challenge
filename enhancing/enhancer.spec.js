@@ -54,7 +54,20 @@ describe("enhancer unit tests", () => {
         })
 
     })
-    
+        
+    it("repairs", () => {
+        expect(enhancer.repair({
+            name: "Plane",
+            durability: 20,
+            enhancement: 20
+        })).toEqual({
+            name: "Plane",
+            durability: 100,
+            enhancement: 20      
+        })
+
+    })
+
 
 ///////////// GETS /////////////
 
