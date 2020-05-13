@@ -2,13 +2,45 @@ const enhancer = require('./enhancer.js');
 // test away!
 
 describe("enhancer unit tests", () => {
-    // it("succeeds", () => {
-    //     expect().toBe())
-    // })
+
+///////////// SUCCEEDS /////////////
+
+    it("succeeds", () => {
+        expect(enhancer.succeed({
+            name: "Car",
+            durability: 20,
+            enhancement: 2
+        })).toEqual({
+            name: "Car",
+            durability: 20,
+            enhancement: 3      
+        })
+
+    })
+        
+    it("succeeds", () => {
+        expect(enhancer.succeed({
+            name: "Plane",
+            durability: 20,
+            enhancement: 20
+        })).toEqual({
+            name: "Plane",
+            durability: 20,
+            enhancement: 20      
+        })
+
+    })
+
+///////////// FAILS /////////////
+
 
     // it("fails", () => {
     //     expect(enhancer.fail().toBe())
     // })
+
+
+///////////// REPAIRS /////////////
+
 
     it("repairs", () => {
         expect(enhancer.repair({
@@ -22,6 +54,10 @@ describe("enhancer unit tests", () => {
         })
 
     })
+    
+
+///////////// GETS /////////////
+
 
     // it("gets", () => {
     //     expect(enhancer.get().toBe())
