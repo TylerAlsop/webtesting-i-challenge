@@ -131,7 +131,30 @@ it("fails", () => {
 ///////////// GETS /////////////
 
 
-    // it("gets", () => {
-    //     expect(enhancer.get().toBe())
-    // })
+    it("gets", () => {
+        expect(enhancer.get({
+            name: "Pebble",
+            durability: 20,
+            enhancement: 0
+        })).toEqual({
+            name: "Pebble",
+            durability: 20,
+            enhancement: 0      
+        })
+    })
+
+    it("gets", () => {
+        expect(enhancer.get({
+            name: "Sword",
+            durability: 20,
+            enhancement: 5
+        })).toEqual({
+            name: "[+5]Sword",
+            durability: 20,
+            enhancement: 5      
+        })
+    })
+
+
+
 })
